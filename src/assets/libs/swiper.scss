@@ -1,0 +1,34 @@
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+
+// /. imports
+
+.swiper-button-prev {
+    left: 0;
+
+    &::after {
+        content: url(../images/arrow_slider-colored.svg);
+    }
+}
+
+.swiper-button-prev.disabled {
+    &::after {
+        content: url(../images/arrow_slider.svg);
+    }
+}
+
+.swiper-button-next {
+    right: 0;
+
+    &::after {
+        content: url(../images/arrow_slider-colored.svg);
+        transform: rotate(180deg);
+    }
+}
+
+.swiper-button-next.disabled {
+    &::after {
+        content: url(../images/arrow_slider.svg);
+        transform: rotate(180deg);
+    }
+}
