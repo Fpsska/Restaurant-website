@@ -24,3 +24,154 @@ body {
 .main {
     flex: 1 1 auto;
 }
+
+.container {
+    max-width: 1210px; // 1170px
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.button {
+    background-color: $purple-color;
+    padding: 2.4rem 4.2rem;
+    color: $white-color;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 500;
+    text-align: center;
+}
+
+// /. general-styles
+
+.header {
+    background-color: #888;
+    background-image: url('../images/header-background.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 55px 0;
+    }
+
+    &__preview {
+        padding: 100px 0;
+    }
+
+    &__information {
+        margin-bottom: 40px;
+    }
+
+    &__subtitle {
+        margin-bottom: 22px;
+    }
+
+    &__interaction {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__nav {
+        flex: 1 1 auto;
+        margin: 0 20px;
+    }
+
+    &__phone {
+        display: flex;
+        align-items: center;
+
+        span {
+            color: $white-color;
+            font-size: $font-size;
+            font-weight: 400;
+            line-height: 24px;
+        }
+
+        svg {
+            margin-right: 10px;
+        }
+    }
+
+    &__title {
+        color: $white-color;
+        font-size: 64px;
+        line-height: 88px;
+        font-weight: 700;
+    }
+
+    &__subtitle {
+        color: $white-color;
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 500;
+    }
+
+}
+
+// /. header
+
+.logo {
+    flex: 0 0 269px;
+    height: 55px;
+    overflow: hidden;
+
+    &__image {
+        object-fit: cover;
+    }
+}
+
+// /. logo
+
+.nav {
+
+    &__menu {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-right: 60px;
+        }
+    }
+
+    &__link {
+        color: $white-color;
+        font-size: $font-size;
+        font-weight: 500;
+        line-height: 24px;
+    }
+}
+
+.navigation {
+    display: flex;
+
+    &__item {
+        width: 48px;
+        height: 48px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        border: 1px solid $white-color;
+
+        &:not(:last-child) {
+            margin-right: 25px;
+        }
+    }
+
+    &__link {
+        color: $white-color
+    }
+}
