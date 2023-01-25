@@ -153,6 +153,8 @@ body {
     }
 }
 
+// /. nav
+
 .navigation {
     display: flex;
 
@@ -175,3 +177,100 @@ body {
         color: $white-color
     }
 }
+
+// /. navigation
+
+.separator {
+    display: flex;
+
+    span {
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background-color: $gold-color;
+        overflow: hidden;
+
+        &:not(:last-child) {
+            margin-right: .5rem;
+        }
+    }
+}
+
+// /. separator
+
+.timetable {
+    padding: 80px 0 90px 0;
+
+    &__wrapper {
+        display: flex;
+        gap: 32px;
+    }
+
+    &__restaurant-preview {
+        flex: 1 1 auto;
+        display: flex;
+        height: 630px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    &__box {
+        z-index: -1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 72%;
+        height: 80%;
+        border: 1px solid $gold-color;
+    }
+
+    &__image {
+        width: 323px;
+        height: 486px;
+        overflow: hidden;
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__image-btm {
+        margin: auto 0 0 0;
+        margin-right: 22px;
+    }
+
+    &__image-top {
+        margin: 0 0 auto 0;
+    }
+
+    .timetable-list {
+        flex: 0 1 45%;
+    }
+}
+
+// /. timetable
+
+.timetable-list {
+    &__template {
+        border-bottom: 1px solid $grey-color;
+        padding: 20px 0;
+    }
+
+    &__description {
+        display: flex;
+        align-items: center;
+    }
+
+    &__date {
+        margin-bottom: 10px;
+    }
+
+    .separator {
+        margin: 0 12px;
+    }
+}
+
+// /. timetable-list
