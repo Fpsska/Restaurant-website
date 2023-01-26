@@ -15,10 +15,13 @@ body {
     margin: 0;
     color: $dark-color;
     font-family: Poppins, sans-serif;
+    height: 100%;
+}
 
+.page {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    min-height: 100vh;
 }
 
 .main {
@@ -26,7 +29,7 @@ body {
 }
 
 .container {
-    max-width: 1210px; // 1170px
+    max-width: 1210px;
     padding: 0 20px;
     margin: 0 auto;
 }
@@ -205,12 +208,17 @@ body {
     margin: 80px 0 90px 0;
 
     &__wrapper {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
         gap: 32px;
     }
 
+    &__list {
+        grid-column: 5 span;
+    }
+
     &__restaurant-preview {
-        flex: 1 1 auto;
+        grid-column: 7 span;
         display: flex;
         height: 630px;
         overflow: hidden;
@@ -343,10 +351,14 @@ body {
 
 .advantage {
     display: grid;
-    grid-template-columns: minmax(300px, auto) minmax(500px, 670px);
+    grid-template-columns: repeat(12, 1fr);
     align-items: center;
     justify-content: space-between;
     grid-gap: 30px;
+
+    &__text {
+        grid-column: 5 span;
+    }
 
     &__title {
         font-size: 40px;
@@ -376,6 +388,7 @@ body {
     }
 
     &__image {
+        grid-column: 7 span;
         position: relative;
         overflow: hidden;
         height: 560px;
@@ -390,10 +403,9 @@ body {
 }
 
 .advantage_reverse {
-    grid-template-columns: minmax(500px, 670px) minmax(300px, auto);
-
     .advantage__image {
         order: -1;
+
     }
 }
 
@@ -454,7 +466,6 @@ body {
 
     &__wrapper {
         display: grid;
-        // grid-template-columns: minmax(20%, auto) minmax(400px, 670px);
         grid-template-columns: repeat(12, 1fr);
         justify-content: space-between;
         grid-gap: 96px;
@@ -578,7 +589,8 @@ body {
     }
 
     &__button {
-        max-width: 270px;
+        align-self: flex-start;
+        min-width: 270px;
     }
 }
 
@@ -612,3 +624,5 @@ body {
         }
     }
 }
+
+// /.footer

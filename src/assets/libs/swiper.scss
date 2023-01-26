@@ -47,7 +47,7 @@
     }
 }
 
-.swiper-button-prev.disabled {
+.swiper-button-prev.swiper-button-disabled {
     &::after {
         content: url(../images/arrow_slider.svg);
     }
@@ -60,7 +60,7 @@
     }
 }
 
-.swiper-button-next.disabled {
+.swiper-button-next.swiper-button-disabled {
     &::after {
         content: url(../images/arrow_slider.svg);
         transform: rotate(180deg);
