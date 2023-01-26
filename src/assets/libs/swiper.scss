@@ -29,7 +29,6 @@
         top: 0;
         left: 0;
         right: 0;
-        margin: 0;
 
         &::after {
             font-size: 0;
@@ -39,6 +38,14 @@
     .swiper-button-prev {
         margin-right: 50px;
     }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    margin-top: 0;
 }
 
 .swiper-button-prev {

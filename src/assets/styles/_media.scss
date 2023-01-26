@@ -1,0 +1,218 @@
+@media screen and (max-width: 1110px) {
+
+    .feedback__wrapper,
+    .timetable__wrapper {
+        grid-template-columns: repeat(8, 1fr);
+    }
+
+    .feedback__contacts,
+    .feedback__form,
+    .timetable-list,
+    .timetable__restaurant-preview {
+        grid-column: 8 span;
+    }
+
+    .timetable__restaurant-preview {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .feedback__contacts {
+
+        .contacts-list {
+            display: grid;
+            grid-gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        .contacts-list__template {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .header__nav {
+        display: none;
+    }
+
+    .header__preview {
+        padding: 50px 0;
+    }
+
+    .testimonials__wrapper {
+        padding: 100px 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .advantage,
+    .advantage_reverse,
+    .feedback__wrapper {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .advantage_reverse {
+        .advantage__text {
+            text-align: end;
+        }
+
+        .advantage__title {
+            &::before {
+                right: -20px;
+                left: auto;
+            }
+        }
+
+        .advantage__image {
+            order: 1;
+        }
+    }
+
+    .advantage__text,
+    .advantage__image,
+    .feedback__contacts,
+    .feedback__form {
+        grid-column: 4 span;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .gallery__content {
+        flex-direction: column;
+    }
+
+    .gallery__top {
+        padding: 68px 0 360px 0;
+    }
+
+    .gallery__text {
+        flex: 1 1 auto;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header__interaction {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header__button {
+        margin-bottom: 100px;
+    }
+
+    .testimonial__content {
+        padding: 0 80px;
+    }
+
+    .header__title {
+        font-size: 54px;
+    }
+
+    .timetable__restaurant-preview {
+        flex-direction: column;
+    }
+
+    .timetable__image {
+        width: 80%;
+        height: 400px;
+    }
+
+    .timetable__image-btm {
+        margin: 0 0 20px auto;
+    }
+
+    .timetable__image-top {
+        margin: 0 auto 0 0;
+    }
+
+    .timetable__box {
+        width: 80%;
+    }
+
+    .form__button {
+        min-width: 100%;
+    }
+
+    .footer__wrapper {
+        flex-direction: column;
+    }
+
+    .footer__logo {
+        flex: 0 0 55px;
+        width: 269px;
+        margin: 0 0 20px 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .header__bar {
+        flex-direction: column;
+    }
+
+    .header__logo {
+        flex: 0 0 55px;
+        width: 269px;
+        margin-bottom: 20px;
+    }
+
+    .form__group {
+        flex-direction: column;
+
+        :not(:last-child) {
+            margin: 0 0 10px 0;
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    .header__title {
+        font-size: 44px;
+    }
+
+    .testimonials__wrapper {
+        padding: 60px 0;
+    }
+
+    .testimonial__content {
+        padding: 20px;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        top: 0 !important;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .timetable__image {
+        width: 100%;
+    }
+
+    .timetable__box {
+        height: 100%;
+    }
+
+    .timetable__list {
+        .timetable-list__template {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .timetable-list__date {
+            margin-bottom: 30px;
+        }
+
+        .timetable-list__description {
+            flex-direction: column;
+        }
+
+        .separator {
+            margin: 8px 0;
+        }
+    }
+}

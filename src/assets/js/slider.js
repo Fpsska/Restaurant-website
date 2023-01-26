@@ -11,14 +11,10 @@ const testimonialsSlider = new Swiper('.testimonials__slider', {
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev'
-    },
-    breakpoints: {
-        slidesPerView: 1
     }
 });
 
 const gallerySlider = new Swiper('.gallery__slider', {
-    slidesPerView: 2.5,
     initialSlide: 1,
     spaceBetween: 30,
     centeredSlides: true,
@@ -26,6 +22,28 @@ const gallerySlider = new Swiper('.gallery__slider', {
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev'
+    },
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 1
+        },
+        // when window width is >= 600px
+        600: {
+            slidesPerView: 1.3
+        },
+        // when window width is >= 768px
+        768: {
+            slidesPerView: 1.2
+        },
+        // when window width is >= 1024px
+        1024: {
+            slidesPerView: 1.5
+        },
+        // when window width is >= 1440px
+        1440: {
+            slidesPerView: 2.5
+        }
     }
 });
 
