@@ -581,3 +581,34 @@ body {
         max-width: 270px;
     }
 }
+
+// /. form
+
+.map {
+    margin-bottom: 43px;
+}
+
+// /. map
+
+.footer {
+    &__wrapper {
+        padding: 20px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        margin-right: 20px;
+    }
+
+    &__navigation {
+        .navigation__item {
+            border: 1px solid $dark-color;
+        }
+
+        .navigation__link {
+            color: $dark-color
+        }
+    }
+}
