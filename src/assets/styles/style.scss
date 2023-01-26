@@ -255,8 +255,6 @@ body {
     }
 }
 
-// /. timetable
-
 .timetable-list {
     &__template {
         border-bottom: 1px solid $grey-color;
@@ -286,9 +284,6 @@ body {
         padding: 210px 0;
     }
 }
-
-// /. testimonials
-
 
 .testimonial {
     text-align: center;
@@ -331,3 +326,79 @@ body {
 }
 
 // /. testimonial
+
+.advantages {
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 110px 0 80px 0;
+    }
+
+    &__template {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+// /. advantages
+
+.advantage {
+    display: grid;
+    grid-template-columns: minmax(300px, auto) minmax(500px, 670px);
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 30px;
+
+    &__title {
+        font-size: 40px;
+        line-height: 88px;
+        font-weight: 700;
+        color: $dark-color;
+        position: relative;
+        margin-bottom: 25px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: -50px;
+            z-index: 2;
+            height: 2px;
+            width: 108px;
+            background-color: $gold-color;
+        }
+    }
+
+    &__description {
+        font-size: $font-size;
+        line-height: 32px;
+        font-weight: 400;
+        color: #808080;
+    }
+
+    &__image {
+        position: relative;
+        overflow: hidden;
+        height: 560px;
+
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+.advantage_reverse {
+
+    grid-template-columns: minmax(500px, 670px) minmax(300px, auto);
+
+    .advantage__image {
+        order: -1;
+    }
+}
+
+// /. advantage
