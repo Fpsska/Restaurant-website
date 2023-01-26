@@ -137,7 +137,6 @@ body {
 // /. logo
 
 .nav {
-
     &__menu {
         display: flex;
         justify-content: center;
@@ -328,7 +327,6 @@ body {
 // /. testimonial
 
 .advantages {
-
     margin: 110px 0 80px 0;
 
     &__wrapper {
@@ -392,7 +390,6 @@ body {
 }
 
 .advantage_reverse {
-
     grid-template-columns: minmax(500px, 670px) minmax(300px, auto);
 
     .advantage__image {
@@ -449,4 +446,138 @@ body {
     }
 }
 
-// /. gallery
+// /. gallery 
+
+.feedback {
+
+    margin-bottom: 50px;
+
+    &__wrapper {
+        display: grid;
+        // grid-template-columns: minmax(20%, auto) minmax(400px, 670px);
+        grid-template-columns: repeat(12, 1fr);
+        justify-content: space-between;
+        grid-gap: 96px;
+    }
+
+    &__title {
+        font-size: 48px;
+        line-height: 88px;
+        font-weight: 700;
+        color: $dark-color;
+        margin-bottom: 35px;
+    }
+
+    &__contacts {
+        grid-column: 5 span;
+    }
+
+    &__form {
+        grid-column: 7 span;
+    }
+}
+
+// /. feedback
+
+.contacts {}
+
+.contacts-list {
+
+    &__template {
+        display: flex;
+        align-items: center;
+
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__icon {
+        flex-shrink: 0;
+        display: inline-block;
+        width: 64px;
+        height: 64px;
+        overflow: hidden;
+        border-radius: 50%;
+        background-color: $gold-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 16px;
+    }
+
+    &__caption {
+        font-size: $font-size;
+        line-height: 32px;
+        font-weight: 400;
+        color: #2E2E2E;
+        margin-bottom: 5px;
+    }
+
+    &__text {
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 500;
+        color: #2E2E2E;
+    }
+}
+
+// /. contacts
+
+.form {
+    display: flex;
+    flex-direction: column;
+
+    &__group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+
+        :not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+
+    &__label {
+        width: 100%;
+    }
+
+    &__label_message {
+        margin-bottom: 20px;
+    }
+
+    &__label span {
+        display: flex;
+        font-size: $font-size;
+        line-height: 32px;
+        font-weight: 400;
+        color: $dark-color;
+    }
+
+    &__input {
+        width: 100%;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 400;
+        color: #808080;
+        border: 1px solid #CCCCCC;
+        padding: 1.8rem 1rem;
+
+        &::placeholder {
+            font-size: $font-size;
+            line-height: 24px;
+            font-weight: 400;
+            color: #808080;
+        }
+    }
+
+    &__button {
+        max-width: 270px;
+    }
+}
