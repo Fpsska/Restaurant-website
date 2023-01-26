@@ -3,9 +3,45 @@
 
 // /. imports
 
-.swiper-button-prev {
-    left: 0;
+.swiper {
+    width: 100%;
+    height: 100%;
+}
 
+.testimonials__slider {
+
+    .swiper-button-prev {
+        left: 0;
+    }
+
+    .swiper-button-next {
+        right: 0;
+    }
+}
+
+.gallery__controls {
+    display: flex;
+    align-items: center;
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        position: static;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0;
+
+        &::after {
+            font-size: 0;
+        }
+    }
+
+    .swiper-button-prev {
+        margin-right: 50px;
+    }
+}
+
+.swiper-button-prev {
     &::after {
         content: url(../images/arrow_slider-colored.svg);
     }
@@ -18,8 +54,6 @@
 }
 
 .swiper-button-next {
-    right: 0;
-
     &::after {
         content: url(../images/arrow_slider-colored.svg);
         transform: rotate(180deg);
