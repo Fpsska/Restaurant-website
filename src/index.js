@@ -4,5 +4,6 @@ import './assets/styles/_media.scss';
 
 import './assets/js/slider';
 import './assets/js/burger';
+import './assets/js/modal';
 
 // /. imports

@@ -20,6 +20,90 @@
     <body>
         <div class="page">
             <header class="header">
+                <div class="modal">
+                    <div class="modal__wrapper">
+                        <button
+                            class="modal__button"
+                            aria-label="close modal"
+                        >
+                            X
+                        </button>
+                        <form
+                            class="reserve-form"
+                            action="#"
+                        >
+                            <fieldset class="reserve-form__inputs">
+                                <label class="reserve-form__label">
+                                    <span>Type your name</span>
+                                    <input
+                                        class="reserve-form__input reserve-form__input_name"
+                                        type="text"
+                                        placeholder="Ivan Ivanov"
+                                        required
+                                    />
+                                </label>
+                                <label class="reserve-form__label">
+                                    <span>Type your phone</span>
+                                    <input
+                                        class="reserve-form__input reserve-form__input_phone"
+                                        type="text"
+                                        placeholder="+7 (921) 333 33-33"
+                                        required
+                                    />
+                                </label>
+                                <label class="reserve-form__label">
+                                    <span>Type number of persons</span>
+                                    <input
+                                        class="reserve-form__input reserve-form__input_persons"
+                                        type="text"
+                                        placeholder="1"
+                                        required
+                                    />
+                                </label>
+                            </fieldset>
+                            <fieldset class="reserve-form__selects">
+                                <select
+                                    class="reserve-form__select reserve-form__select_table"
+                                    required
+                                >
+                                    <option
+                                        selected
+                                        disabled
+                                    >
+                                        choose table
+                                    </option>
+                                    <option>table №1</option>
+                                    <option>table №2</option>
+                                    <option>table №3</option>
+                                    <option>table №4</option>
+                                    <option>table №5</option>
+                                </select>
+                                <select
+                                    class="reserve-form__select reserve-form__select_date"
+                                    required
+                                >
+                                    <option
+                                        selected
+                                        disabled
+                                    >
+                                        choose date of visit
+                                    </option>
+                                    <option>01/25/2023</option>
+                                    <option>01/26/2023</option>
+                                    <option>01/27/2023</option>
+                                    <option>01/28/2023</option>
+                                    <option>01/29/2023</option>
+                                </select>
+                            </fieldset>
+                            <button
+                                class="reserve-form__button"
+                                type="submit"
+                            >
+                                Send
+                            </button>
+                        </form>
+                    </div>
+                </div>
                 <div class="container">
                     <div class="header__wrapper">
                         <div class="header__bar">
@@ -266,12 +350,12 @@
                                 </h1>
                             </div>
                             <div class="header__interaction">
-                                <a
+                                <button
+                                    type="button"
                                     class="header__button button"
-                                    href="#"
                                 >
                                     Reserve a table
-                                </a>
+                                </button>
                                 <ul class="header__navigation navigation">
                                     <li class="navigation__item">
                                         <a
