@@ -49,8 +49,6 @@ body {
     text-align: center;
 }
 
-
-
 // /. general-styles
 
 .header {
@@ -60,6 +58,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     min-height: 100vh;
+    transition: all .2s ease-in-out;
 
     &__wrapper {
         display: flex;
@@ -71,6 +70,7 @@ body {
         justify-content: space-between;
         align-items: center;
         padding: 55px 0;
+        transition: all .2s ease-in-out;
     }
 
     &__preview {
@@ -129,6 +129,123 @@ body {
 }
 
 // /. header
+
+.nav_mobile {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    position: fixed;
+    opacity: 0;
+    left: 0;
+    top: -100%;
+    z-index: 0;
+    background-color: rgba($dark-color, .5);
+    transition: all .3s ease 0s;
+    width: 100%;
+    min-height: 100vh;
+
+    .nav__menu {
+        flex: 1 1 auto;
+        justify-content: flex-start;
+        flex-direction: column;
+        margin: 45px 20px;
+        overflow-y: scroll;
+        height: calc(100vh - 90px)
+    }
+
+    .nav__item {
+        padding-bottom: 10px;
+        max-width: 40%;
+
+        &:not(:last-child) {
+            margin: 0 0 20px 0;
+            border-bottom: 1px solid $grey-color;
+        }
+    }
+}
+
+.nav_mobile.visible {
+    top: 0;
+    z-index: 2;
+    opacity: 1;
+}
+
+.burger-menu {
+    transition: all .2s ease-in-out;
+    order: 2;
+    display: none;
+    width: 20px;
+    height: 10px;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: auto;
+    margin: 20px;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        display: block;
+        background: $white-color;
+        height: 1px;
+        width: 100%;
+        transition: all .3s ease 0s;
+    }
+
+    &::before {
+        top: 0;
+    }
+
+    &::after {
+        bottom: 0;
+    }
+
+    span {
+        position: absolute;
+        top: 5px;
+        left: 0;
+        background-color: $white-color;
+        transition: all .3s ease 0s;
+        width: 100%;
+        height: 1px;
+    }
+}
+
+.burger-menu_close {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 20px;
+
+    span {
+        transform: rotate(45deg);
+        opacity: 0;
+    }
+
+    &::before {
+        transform: rotate(45deg);
+        top: 5px;
+    }
+
+    &::after {
+        transform: rotate(-45deg);
+        bottom: 5px;
+    }
+}
+
+.burger-menu_close.hidden {
+    opacity: 0;
+}
+
+.burger-menu.hidden {
+    opacity: 0;
+}
+
+// /. nav_mobile
 
 .logo {
     flex: 0 0 269px;
