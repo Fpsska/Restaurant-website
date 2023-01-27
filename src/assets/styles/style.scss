@@ -48,6 +48,28 @@ body {
     line-height: 24px;
     font-weight: 500;
     text-align: center;
+    transition: all .3s ease-in-out;
+    position: relative;
+
+    &::before {
+        content: '';
+        width: 0;
+        height: 1px;
+        background-color: $white-color;
+        position: absolute;
+        top: auto;
+        left: 0;
+        bottom: 0;
+        transition: all .3s ease-in-out;
+    }
+
+    &:hover {
+        color: $dark-color;
+
+        &::before {
+            width: 100%;
+        }
+    }
 }
 
 // /. general-styles
@@ -95,6 +117,29 @@ body {
     &__nav {
         flex: 1 1 auto;
         margin: 0 20px;
+
+        .nav__link {
+            position: relative;
+            padding-bottom: 2.5px;
+
+            &:hover {
+                &::after {
+                    width: 100%;
+                    left: 0;
+                }
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                height: 1px;
+                width: 0;
+                background-color: #fff;
+                transition: all 0.3s ease;
+            }
+        }
     }
 
     &__phone {
@@ -252,6 +297,12 @@ body {
     flex: 0 0 269px;
     height: 55px;
     overflow: hidden;
+    transform: scale(1);
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.05);
+    }
 
     &__image {
         object-fit: cover;
@@ -294,6 +345,18 @@ body {
         align-items: center;
         border-radius: 50%;
         border: 1px solid $white-color;
+        transform: scale(1);
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            cursor: pointer;
+            border-color: $purple-color;
+            transform: scale(1.05);
+
+            .navigation__link {
+                color: $purple-color;
+            }
+        }
 
         &:not(:last-child) {
             margin-right: 25px;
@@ -301,7 +364,8 @@ body {
     }
 
     &__link {
-        color: $white-color
+        color: $white-color;
+        transition: all .3s ease-in-out;
     }
 }
 
@@ -708,6 +772,15 @@ body {
     &__button {
         align-self: flex-start;
         min-width: 270px;
+
+        &:hover {
+            color: $gold-color;
+        }
+
+        &::before {
+            height: 2px;
+            background-color: $gold-color;
+        }
     }
 }
 
@@ -734,6 +807,14 @@ body {
     &__navigation {
         .navigation__item {
             border: 1px solid $dark-color;
+
+            &:hover {
+                border-color: $gold-color;
+
+                .navigation__link {
+                    color: $gold-color;
+                }
+            }
         }
 
         .navigation__link {
