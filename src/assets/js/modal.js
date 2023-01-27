@@ -1,3 +1,7 @@
+import { makePostRequest } from './rest';
+
+// /. imports
+
 const reserveButton = document.querySelector('.header__button');
 const modal = document.querySelector('.modal');
 const modalCloseButton = document.querySelector('.modal__button');
@@ -46,7 +50,6 @@ form?.addEventListener('submit', e => {
     if (tableSelect.selectedIndex === 0 || dateSelect.selectedIndex === 0) {
         return;
     }
-    //
 
     const output = {
         name: inputName.value,
@@ -57,7 +60,11 @@ form?.addEventListener('submit', e => {
         timeReseivedData: new Date().toISOString()
     };
 
-    console.log(output);
+    makePostRequest('https://jsonplaceholder.typicode.com/posts', output)
+        .then(data => console.log(data))
+        .catch(({ message }) =>
+            console.error(`Error in makePostRequest promise: ${message}`)
+        );
 
     form.reset();
 });
