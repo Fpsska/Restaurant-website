@@ -26,6 +26,24 @@ modalCloseButton.addEventListener('click', () => {
     modal.classList.remove('visible');
 });
 
+document.addEventListener('keydown', e => {
+    // hide modal when press Escape key
+    const validCondition =
+        modal.classList.contains('visible') && e.code === 'Escape';
+    validCondition && modal.classList.remove('visible');
+});
+
+document.addEventListener('click', e => {
+    // hide modal when is clicked outside this element
+    const isModalVisible = modal.classList.contains('visible');
+    const validElements =
+        modal.contains(e.target) || reserveButton.contains(e.target);
+
+    if (isModalVisible && !validElements) {
+        modal.classList.remove('visible');
+    }
+});
+
 // /. modal
 
 inputName?.addEventListener('input', function (e) {
@@ -69,9 +87,3 @@ form?.addEventListener('submit', e => {
 });
 
 // /. form
-
-document.addEventListener('keydown', e => {
-    const validCondition =
-        modal.classList.contains('visible') && e.code === 'Escape';
-    validCondition && modal.classList.remove('visible');
-});
