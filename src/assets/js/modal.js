@@ -7,7 +7,6 @@ const modal = document.querySelector('.modal');
 const modalCloseButton = document.querySelector('.modal__button');
 
 const form = document.querySelector('.reserve-form');
-const formSubmitButton = document.querySelector('.reserve-form__button');
 
 const inputName = document.querySelector('.reserve-form__input_name');
 const inputPhone = document.querySelector('.reserve-form__input_phone');

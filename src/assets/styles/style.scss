@@ -81,7 +81,6 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     min-height: 100vh;
-    transition: all .2s ease-in-out;
 
     &__wrapper {
         display: flex;
@@ -217,6 +216,7 @@ body {
 }
 
 .burger-menu {
+    z-index: 2;
     transition: all .2s ease-in-out;
     order: 2;
     display: none;
@@ -289,6 +289,15 @@ body {
 
 .burger-menu.hidden {
     opacity: 0;
+}
+
+.burger-menu.dark {
+
+    span,
+    &::after,
+    &::before {
+        background-color: $dark-color;
+    }
 }
 
 // /. nav_mobile
@@ -840,7 +849,7 @@ body {
 
     &__button {
         background-color: transparent;
-        color: red;
+        color: $white-color;
         position: absolute;
         top: 0;
         right: 0;
