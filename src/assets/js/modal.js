@@ -51,11 +51,11 @@ form?.addEventListener('submit', e => {
     }
 
     const output = {
-        name: inputName.value,
-        phone: inputPhone.value,
-        personsQuantity: inputPersonsQuantity.value,
-        table: tableSelect.value,
-        date: dateSelect.value,
+        name: inputName.value.trim(),
+        phone: inputPhone.value.trim(),
+        personsQuantity: inputPersonsQuantity.value.trim(),
+        table: tableSelect.value.trim(),
+        date: dateSelect.value.trim(),
         timeReseivedData: new Date().toISOString()
     };
 

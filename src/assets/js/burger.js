@@ -43,7 +43,6 @@ document.addEventListener('keydown', e => {
 
 window.addEventListener('scroll', e => {
     const { height } = window.getComputedStyle(header);
-    console.log(height);
 
     const validCondition =
         !burgerMenu.classList.contains('visible') &&

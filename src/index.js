@@ -6,5 +6,6 @@ import './assets/js/slider';
 import './assets/js/burger';
 import './assets/js/modal';
 import './assets/js/anchors';
+import './assets/js/feedback-form';
 
 // /. imports

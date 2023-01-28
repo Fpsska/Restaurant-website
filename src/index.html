@@ -117,6 +117,7 @@
                                     alt="logo"
                                 />
                             </a>
+                            <!--  -->
                             <nav class="nav header__nav">
                                 <ul class="nav__menu">
                                     <li class="nav__item">
@@ -153,7 +154,7 @@
                                     </li>
                                 </ul>
                             </nav>
-                            <!--  -->
+                            <!-- /. desktop nav  -->
                             <nav
                                 class="nav nav_mobile"
                                 id="nav-mobile"
@@ -293,7 +294,6 @@
                                     </li>
                                 </ul>
                             </nav>
-                            <!--  -->
                             <button
                                 class="burger-menu"
                                 id="burger-menu"
@@ -303,7 +303,7 @@
                             >
                                 <span aria-hidden="true"></span>
                             </button>
-                            <!--  -->
+                            <!-- /. mobile nav -->
                             <a
                                 class="header__phone"
                                 href="tel:+32 9 282 57 25"
@@ -954,41 +954,42 @@
                                     have any questions?
                                 </h3>
                                 <form
-                                    class="form"
+                                    class="feedback-form"
                                     action="#"
                                 >
-                                    <div class="form__group">
-                                        <label class="form__label">
+                                    <div class="feedback-form__group">
+                                        <label class="feedback-form__label">
                                             <span>Name</span>
                                             <input
-                                                class="form__input"
+                                                class="feedback-form__input feedback-form__input_name"
                                                 type="text"
                                                 placeholder="Input your name"
                                                 required
                                             />
                                         </label>
-                                        <label class="form__label">
+                                        <label class="feedback-form__label">
                                             <span>Email</span>
                                             <input
-                                                class="form__input"
-                                                type="text"
+                                                class="feedback-form__input feedback-form__input_email"
+                                                type="email"
                                                 placeholder="Input your email"
                                                 required
                                             />
                                         </label>
                                     </div>
                                     <label
-                                        class="form__label form__label_message"
+                                        class="feedback-form__label feedback-form__label_message"
                                     >
                                         <span>Speciale Request</span>
                                         <textarea
-                                            class="form__input form__input_message"
+                                            class="feedback-form__input feedback-form__input_message"
                                             placeholder="Input your special request"
+                                            autofocus
                                         >
                                         </textarea>
                                     </label>
                                     <button
-                                        class="button form__button"
+                                        class="button feedback-form__button"
                                         type="submit"
                                     >
                                         Send
