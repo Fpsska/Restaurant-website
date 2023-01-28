@@ -37,15 +37,15 @@ body {
 }
 
 .container_testimonials {
-    max-width: 1130px;
+    max-width: 1200px;
 }
 
 .button {
     background-color: $purple-color;
     padding: 2.4rem 4.2rem;
     color: $white-color;
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
     font-weight: 500;
     text-align: center;
     transition: all .3s ease-in-out;
@@ -373,6 +373,9 @@ body {
     }
 
     &__link {
+        font-size: $font-size;
+        font-weight: 600;
+        line-height: 24px;
         color: $white-color;
         transition: all .3s ease-in-out;
     }
@@ -399,11 +402,12 @@ body {
 // /. separator
 
 .timetable {
-    margin: 80px 0 90px 0;
+    margin: 60px 0 110px 0;
 
     &__wrapper {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
+        align-items: flex-start;
         gap: 32px;
     }
 
@@ -414,7 +418,7 @@ body {
     &__restaurant-preview {
         grid-column: 7 span;
         display: flex;
-        height: 630px;
+        height: 638px;
         overflow: hidden;
         position: relative;
     }
@@ -425,8 +429,8 @@ body {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 72%;
-        height: 80%;
+        width: 70%;
+        height: 78%;
         border: 1px solid $gold-color;
     }
 
@@ -463,7 +467,17 @@ body {
     }
 
     &__date {
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 600;
         margin-bottom: 10px;
+    }
+
+    &__name,
+    &__dish {
+        font-size: 18px;
+        line-height: 32px;
+        font-weight: 400;
     }
 
     .separator {
@@ -477,7 +491,7 @@ body {
     background-color: $purple-color;
 
     &__wrapper {
-        padding: 210px 0;
+        padding: 220px 0;
     }
 }
 
@@ -485,14 +499,14 @@ body {
     text-align: center;
 
     svg {
-        margin-bottom: 34px;
+        margin-bottom: 30px;
     }
 
     &__content {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 0 122px;
+        padding: 0 190px;
     }
 
     &__caption {
@@ -504,19 +518,19 @@ body {
     }
 
     &__text {
-        max-width: 675px;
+        // max-width: 675px;
         font-size: $font-size;
         line-height: 40px;
         font-weight: 400;
         color: $white-color;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
     }
 
     &__author {
         font-size: 24px;
         line-height: 40px;
         font-weight: 600;
-        letter-spacing: 8px;
+        letter-spacing: 6px;
         color: $gold-color;
     }
 }
@@ -597,11 +611,9 @@ body {
 // /. advantages
 
 .gallery {
-    margin-bottom: 100px;
-
     &__top {
         background-color: $purple-color;
-        padding: 68px 0 393px 0;
+        padding: 72px 0 393px 0;
     }
 
     &__content {
@@ -611,12 +623,12 @@ body {
     }
 
     &__text {
-        flex: 0 0 450px;
+        flex: 0 0 490px;
     }
 
     &__title {
         font-size: 48px;
-        line-height: 88px;
+        line-height: 80px;
         font-weight: 700;
         color: $white-color;
     }
@@ -629,14 +641,14 @@ body {
     }
 
     &__slider {
-        margin-top: -343px;
+        margin-top: -347px;
 
-        .swiper-slide {
+        .swiper-slide.swiper-slide-active {
             overflow: hidden;
         }
 
         img {
-            min-width: 970px;
+            width: 100%;
             height: 646px;
             object-fit: cover;
         }
@@ -646,8 +658,7 @@ body {
 // /. gallery 
 
 .feedback {
-
-    margin-bottom: 50px;
+    margin: 102px 0 50px 0;
 
     &__wrapper {
         display: grid;
@@ -712,7 +723,6 @@ body {
         line-height: 32px;
         font-weight: 400;
         color: #2E2E2E;
-        margin-bottom: 5px;
     }
 
     &__text {
@@ -796,7 +806,7 @@ body {
 // /. form
 
 .map {
-    margin-bottom: 43px;
+    margin-bottom: 20px;
 }
 
 // /. map

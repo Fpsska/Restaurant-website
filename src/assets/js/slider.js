@@ -40,9 +40,9 @@ const gallerySlider = new Swiper('.gallery__slider', {
         1024: {
             slidesPerView: 1.5
         },
-        // when window width is >= 1440px
-        1440: {
-            slidesPerView: 2.5
+        // when window width is >= 1920px
+        1920: {
+            slidesPerView: 1.95
         }
     }
 });
