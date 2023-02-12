@@ -173,6 +173,10 @@
             margin: 0 0 10px 0;
         }
     }
+
+    .feedback-form__button {
+        min-width: 100%;
+    }
 }
 
 @media screen and (max-width: 425px) {

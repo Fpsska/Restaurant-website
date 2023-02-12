@@ -2,6 +2,7 @@
 @import './reset';
 @import './vars';
 @import './mixins';
+@import './fonts';
 
 /* /. imports */
 
@@ -15,7 +16,7 @@ body {
     padding: 0;
     margin: 0;
     color: $dark-color;
-    font-family: Poppins, sans-serif;
+    font-family: 'Poppins', sans-serif;
     height: 100%;
 }
 
