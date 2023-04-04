@@ -6,4 +6,4 @@
 
 #
 
-### `Watch demo` _[HelloBrand-Task](https://fpsska.github.io/HelloBrand-Task/)_
+### `Watch demo` _[Restaurant-spa](https://fpsska.github.io/Restaurant-spa/)_
