@@ -6,4 +6,4 @@
 
 #
 
-### `Watch demo` _[Restaurant-spa](https://fpsska.github.io/Restaurant-spa/)_
+### `Watch demo` _[Restaurant-website](https://fpsska.github.io/Restaurant-website/)_
